@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account</title>
+    <link rel="shortcut icon" href="assets/imgs/favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <!-- Main Style -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <!-- Start Header -->
+    <div class="overlay">
+    <header>
+      <div class="container">
+        <a class="logo" href="#"><img src="assets/imgs/logo.png" alt="RedStore"></a>
+        <ul class="nav__list">
+          <div class="links">
+            <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="product.html" class="nav__link">Products</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+            <li class="nav__item"><a href="account.html" class="nav__link">Account</a></li>
+          </div>
+          <div class="cart-menu">
+            <a class="cart" href="cart.html"><img src="assets/imgs/cart.png" alt="Shopping Cart"></a>
+            <div class="menu">
+                <div class="menu__line"></div>
+                <div class="menu__line"></div>
+                <div class="menu__line"></div>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </header>
+    <!-- End Header -->
+        <!-- Start Hero -->
+        <div class="hero">
+          <div class="container">
+            <div class="hero__text account">
+              <form action="#">
+                <h2>Login</h2>
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <input class="btn" type="submit" value="Login">
+              </form>
+            </div>
+              <img src="assets/imgs/hero_img.png" alt="Hero Image">
+          </div>
+        </div>
+      </div>
+        <!-- End Hero -->
+    <!-- JavaScript For Menu -->
+    <script>
+      const links = document.querySelector(".links");
+      const btn = document.querySelector(".menu");
+      btn.addEventListener('click', function() {
+      btn.classList.toggle('active');
+      links.classList.toggle('show');})
+    </script>
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
