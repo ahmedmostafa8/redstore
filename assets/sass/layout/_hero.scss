@@ -1,0 +1,68 @@
+@use "../helpers/helpers" as *;
+// ====================================
+.overlay {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(#fff, #ffd6d6);
+}
+.hero {
+  @include breakpoint(md) {
+    padding-top: calc($padding-section + 2rem);
+    padding-bottom: $padding-section;
+  }
+  @include breakpoint(sm) {
+    padding-top: calc($padding-section + 1rem);
+    padding-bottom: $padding-section;
+  }
+  .container {
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 2rem;
+    @include breakpoint(md) {
+      flex-direction: column;
+      row-gap: 3rem;
+    }
+    .hero__text {
+      @include breakpoint(md) {
+        text-align: center;
+      }
+      h1,
+      p,
+      a {
+        text-transform: capitalize;
+      }
+      h1 {
+        font-size: 2.8125rem;
+        @include breakpoint(xl) {
+          font-size: 2.5rem;
+        }
+        @include breakpoint(lg) {
+          font-size: 2rem;
+        }
+      }
+      p {
+        line-height: 1.4;
+        color: #181818;
+        @include breakpoint(lg) {
+          font-size: 0.9375rem;
+        }
+      }
+      .button-primary {
+        @include breakpoint(md) {
+          margin: auto;
+        }
+      }
+    }
+    img {
+      max-width: 500px;
+      @include breakpoint(lg) {
+        max-width: 350px;
+      }
+      @include breakpoint(md) {
+        max-width: 100%;
+      }
+    }
+  }
+}

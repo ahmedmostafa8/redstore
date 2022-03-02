@@ -1,0 +1,76 @@
+@use "../helpers/helpers" as *;
+// ====================================
+
+.product-details {
+  padding-top: $padding-section;
+  padding-bottom: $padding-section;
+  .container {
+    display: flex;
+    gap: 2rem;
+    @include breakpoint(md) {
+      flex-direction: column;
+    }
+    .product-image {
+      .main-img {
+        width: 400px;
+        overflow: hidden;
+        @include breakpoint(md) {
+          width: auto;
+        }
+        img {
+          max-width: 100%;
+          transition: transform .3s;
+        }
+        &:hover img {
+          transform: scale(1.1);
+        }
+      }
+      .button-img {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+        gap: 10px;
+        margin-top: 5px;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+    .product-info {
+      span {
+        color: #464646;
+        font-weight: 500;
+      }
+      h1 {
+        @include breakpoint(lg) {
+          font-size: 1.5rem;
+        }
+      }
+      .price {
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+      select {
+        margin-bottom: 20px;
+        outline: 0;
+      }
+      .count {
+        display: flex;
+        gap: 1rem;
+        input {
+          width: 45px;
+          height: 40px;
+          padding: 5px;
+          border: 1px solid $color-primary;
+          outline: 0;
+        }
+      }
+      .details {
+        margin-top: 35px;
+        p {
+          color: #464646;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+}

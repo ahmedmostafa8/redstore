@@ -1,0 +1,25 @@
+@use "../helpers/helpers" as *;
+// ====================================
+
+.logo-brands {
+  padding-top: $padding-section;
+  padding-bottom: $padding-section;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    @media screen and (max-width:415px) {
+      justify-content: center;
+    }
+    img {
+      filter: grayscale(100%);
+      transition: filter .3s;
+      cursor: pointer;
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@use '../helpers/helpers' as *;
+// ====================================
+
+.cart {
+  padding-top: $padding-section;
+  padding-bottom: $padding-section;
+  .container {
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__main {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      th {
+        text-align: left;
+        background-color: $color-primary;
+        color: #fff;
+        padding: .3125rem;
+      }
+      td {
+        padding: .625rem .3125rem 0 0;
+      }
+      td:last-child {
+        text-align: right;
+      }
+      td input {
+        width: 40px;
+        height: 30px;
+        padding: .3125rem;
+      }
+      .cart-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .625rem;
+        img {
+          width: 80px;
+          height: 80px;
+        }
+        p {
+          margin: 0;
+          @include breakpoint(sm) {
+            display: none;
+          }
+        }
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: .625rem;
+          a {
+            color: $color-primary;
+            font-size: .8125rem;
+          }
+        }
+      }
+    }
+  }
+  .total-price {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.625rem;
+    table {
+      width: 100%;
+      max-width: 21.875rem;
+      border-top: 3px solid $color-primary;
+      padding: .625rem 0 0 0;
+      td {
+        padding: .3125rem 0;
+      }
+      td:last-child {
+        text-align: right;
+      }
+    }
+  }
+  .checkout {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.875rem;
+  }
+}

@@ -1,0 +1,42 @@
+@use "../helpers/helpers" as *;
+// ====================================
+
+// Featured Section & Latest Products
+
+.featured-latest-products {
+  padding-bottom: $padding-section;
+  .all-products {
+    display: grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    .product-box {
+      transition: transform .3s;
+      .product-image {
+        overflow: hidden;
+        cursor: pointer;
+        img {
+          max-width: 100%;
+          height: 100%;
+        }
+      }
+      &:hover {
+        transform: translateY(-5px);
+      }
+      .product-info {
+        @include breakpoint(md) {
+          text-align: center;
+          font-size: 1.25rem;
+        }
+        h3 {
+          font-weight: 500;
+          margin-top: .625rem;
+          margin-bottom: .3125rem;
+        }
+        .product-stars {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}

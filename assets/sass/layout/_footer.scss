@@ -1,0 +1,75 @@
+@use "../helpers/helpers" as *;
+// ====================================
+
+footer {
+  padding-top: $padding-section;
+  padding-bottom: $padding-section;
+  background-color: black;
+  color: white;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    @media screen and (max-width:470px) {
+      gap: 0;
+    }
+    .sec-1 {
+      @include breakpoint(sm) {
+        text-align: center;
+      }
+      @media screen and (max-width:470px) {
+        margin-bottom: 3rem;
+      }
+      p {
+        color: #838383;
+      }
+      img {
+        width: 9.375rem;
+        cursor: pointer;
+      }
+    }
+    .sec-2 {
+      text-align: center;
+      img {
+        width: 12.5rem;
+        cursor: pointer;
+      }
+      p {
+        color: #838383;
+      }
+    }
+    .sec-3,.sec-4 {
+      text-align: center;
+      h4 {
+        margin-top: 0;
+      }
+      a {
+        display: block;
+        color: #838383;
+        margin-bottom: 8px;
+        transition: .3s;
+        &:hover {
+          color: white;
+          transform: translateX(3px);
+        }
+      }
+    }
+  }
+}
+
+.copyright {
+  background-color: black;
+  p {
+    width: fit-content;
+    color: white;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    a {
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@use "../helpers/helpers" as *;
+// ====================================
+
+.testimonials {
+  padding-top: $padding-section;
+  padding-bottom: $padding-section;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    .box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 1.25rem;
+      transition: transform .3s;
+      &:hover {
+        transform: translateY(-5px);
+      }
+      .icon {
+        font-size: 60px;
+        color: $color-primary;
+      }
+      p {
+        color: #404040; 
+      }
+      .product-stars {
+        color: $color-primary;
+      }
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-top: .625rem;
+      }
+      span {
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 5px;
+        color: #2c2a2a;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.related .container .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  a {
+    color: black;
+    font-weight: 500;
+    position: relative;
+    &::before {
+      content:"";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -5px;
+      width: 50%;
+      height: 3px;
+      background-color: hsl(7,100%,62%);
+      transition: width .3s;
+    }
+    &:hover::before {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@use "../helpers/helpers" as *;
+// ====================================
+
+.main-title {
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: $padding-section;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    height: 5px;
+    width: 40%;
+    background-color: $color-primary;
+    transition: width 300ms;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}

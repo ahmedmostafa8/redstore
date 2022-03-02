@@ -1,0 +1,23 @@
+@use "../helpers/helpers" as *;
+// =====================================
+
+.three-product {
+  padding-top: $padding-section;
+  padding-bottom: $padding-section;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    .product {
+      overflow: hidden;
+      cursor: pointer;
+      img {
+        max-width: 100%;
+        transition: transform .3s;
+      }
+      &:hover img{
+        transform: rotate(-5deg) scale(1.1);
+      }
+    }
+  }
+}

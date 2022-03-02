@@ -1,0 +1,46 @@
+@use '../helpers/helpers' as *; 
+// ====================================
+
+.products-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: $padding-section;
+  padding-bottom: 1.875rem;
+  .select {
+    outline: 0;
+    option {
+      @include breakpoint(sm) {
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+.numb-pages {
+  display: flex;
+  gap: 1rem;
+  padding-top: 50px;
+  @include breakpoint(sm) {
+    justify-content: center;
+  }
+  div {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    border: 1px solid $color-primary;
+    cursor: pointer;
+    transition: .3s;
+    &:first-child {
+      background-color: $color-primary;
+      color: #fff;
+    }
+    &:hover {
+      color: #fff;
+      background-color: $color-primary;
+    }
+  }
+}
